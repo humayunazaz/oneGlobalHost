@@ -1,0 +1,15 @@
+<div class="current-plan col-sm-12" *ngIf="!loading">
+    <div class="panel panel-default">
+        <div class="panel-heading">Current Plan Information</div>
+        <div class="panel-body">
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">Admin Name: {{current.adminName}}</li>
+          <li class="list-group-item">Company Name: {{current.companyName}}</li>
+          <li class="list-group-item">Register User Count: {{current.RUcount}}</li>
+          <li class="list-group-item">Monthly Payment Amount: {{current.MPamount}}</li>
+          <li class="list-group-item">Visa: {{current.visa}}</li>
+          <li class="list-group-item">Next Billing Date: {{current.NBdate | date:'dd-MMM-yyyy'}}</li>
+        </ul>
+    </div>
+</div>

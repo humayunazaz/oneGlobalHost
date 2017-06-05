@@ -1,0 +1,12 @@
+.single-user{
+    padding: 25px;
+}
+.onoffswitch{
+    width: 70px;
+}
+.onoffswitch-switch{
+    right: 50px;
+}
+.delete-button{
+    text-align: right;
+}

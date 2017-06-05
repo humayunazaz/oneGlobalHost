@@ -1,0 +1,6 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Add User</div>
+  <div class="panel-body">
+    <user-form [groups]="groups" [projects]="projects" [form]="form" (addResult)="newUser($event.add)"></user-form>
+  </div>
+</div>

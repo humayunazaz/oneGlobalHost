@@ -1,0 +1,92 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="user-form" *ngIf="user">
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="textinput">Name</label>
+      <div class="col-sm-8">
+        <input id="textinput" name="username" formControlName="name" type="text" placeholder="Name" class="form-control input-md" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="textinput">Organization</label>
+      <div class="col-sm-8">
+        <input id="textinput" name="organization" formControlName="organization" type="text" placeholder="Name" class="form-control input-md" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="textinput">Account Status</label>
+      <div class="col-sm-8">
+        <input id="textinput" name="accountstatus" formControlName="accountstatus" type="text" placeholder="Name" class="form-control input-md" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="textinput">Login Status</label>
+      <div class="col-sm-8">
+        <input id="textinput" name="loginstatus" formControlName="loginstatus" type="text" placeholder="Name" class="form-control input-md" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="selectbasic">Groups</label>
+      <div class="col-sm-8">
+        <select id="selectbasic" name="selectbasic" formControlName="group" class="form-control">
+          <option selected>select a group</option>
+          <option *ngFor="let group of groups" value={{group}}>{{group}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="selectbasic">Projects</label>
+      <div class="col-sm-8">
+        <select id="selectbasic" name="selectbasic" formControlName="project" class="form-control">
+          <option selected>select a project</option>
+          <option *ngFor="let project of projects" value={{project}}>{{project}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="add-button col-sm-12">
+      <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">{{form}}</button>
+    </div>
+  </form>
+
+  <form [formGroup]="groupForm" (ngSubmit)="onSubmit()" class="user-form" *ngIf="!user && !search">
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="textinput">Name</label>
+      <div class="col-sm-8">
+        <input id="textinput" name="username" formControlName="name" type="text" placeholder="Name" class="form-control input-md" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="textinput">Gravatar</label>
+      <div class="col-sm-8">
+        <input id="textinput" name="username" formControlName="gravatar" type="text" placeholder="Name" class="form-control input-md" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="selectbasic">Administrators</label>
+      <div class="col-sm-8">
+        <select id="selectbasic" name="selectbasic" formControlName="administrators" class="form-control">
+          <option selected>select a administrator</option>
+          <option *ngFor="let admin of admins" value={{admin}}>{{admin}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="add-button col-sm-12">
+      <button type="submit" class="btn btn-primary" [disabled]="!groupForm.valid">{{form}}</button>
+    </div>
+  </form>
+
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="user-form" *ngIf="!user && search">
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="textinput">Name</label>
+      <div class="col-sm-8">
+        <input id="textinput" name="username" formControlName="name" type="text" placeholder="Name" class="form-control input-md" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-4 control-label" for="textinput">Gravatar</label>
+      <div class="col-sm-8">
+        <input id="textinput" name="username" formControlName="gravatar" type="text" placeholder="Name" class="form-control input-md" required>
+      </div>
+    </div>
+    <div class="add-button col-sm-12">
+      <button type="submit" class="btn btn-primary" [disabled]="!searchForm.valid">{{form}}</button>
+    </div>
+  </form>

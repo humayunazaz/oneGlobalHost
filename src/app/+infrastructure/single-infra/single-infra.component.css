@@ -1,0 +1,35 @@
+.single-instance{
+    float: left;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+.text{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    min-height: 80px;
+}
+.icons{
+    float: left;
+    width: 100%;
+}
+.icons .fa{
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.single-instance p{
+    margin-bottom: 5px;
+}
+.single-instance p:nth-child(1){
+    font-size: 20px;
+}
+.deployed, .models{
+    float: left;
+    width: 100%;
+}

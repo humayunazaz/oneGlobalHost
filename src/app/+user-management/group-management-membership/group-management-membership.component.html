@@ -1,0 +1,25 @@
+<div class="group-management-memebership">
+  <div class="panel panel-default">
+    <div class="panel-heading">User Management</div>
+    <div class="panel-body">
+      <user-search></user-search>
+      <search-group></search-group>
+      <div class="users col-sm-6">
+        <div *ngIf="!loading">
+            <data-table [data]="Userdata" [rowsOnPage]="rowsOnPage" [sortBy]="sortBy"  [membership]="userMembership"></data-table>
+        </div>
+      </div>
+      <div class="groups col-sm-6">
+        <div *ngIf="!loading">
+            <data-table [data]="Groupdata" [rowsOnPage]="rowsOnPage" [sortBy]="sortBy"  [membership]="groupMembership" [user]="user"></data-table>
+        </div>
+      </div>
+      <div class="col-sm-6">
+
+      </div>
+      <div class="col-sm-6">
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="addPermission">
+  <div class="panel panel-default">
+    <div class="panel-heading">Add Permission</div>
+    <div class="panel-body">
+      <sa-datatable [options]="options"
+          [detailsFormat]="detailsFormat"
+          tableClass="display projects-table table table-striped table-bordered table-hover"
+          width="100%"
+          >
+          <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Policy Name</th>
+            <th><i
+              class="text-muted hidden-md hidden-sm hidden-xs"></i>
+              Policy Type
+            </th>
+            <th>Description</th>
+          </tr>
+          </thead>
+
+        </sa-datatable>
+        <div class="add-per">
+          <button class="btn btn-primary">Add Permission</button>
+        </div>
+    </div>
+  </div>
+</div>

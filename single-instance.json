@@ -1,0 +1,28 @@
+
+    {
+        "logo" : "Cassandra_logo.svg.png",
+        "clouds": [
+            "Amazon web service",
+            "Digital ocean",
+            "IBM Blue-mix",
+            "Google Compute",
+            "linnode",
+            "Vultr",
+            "Microsoft Azure",
+            "OVH",
+            "Packet"
+        ],
+        "size": "Medium",
+        "CPU": "2",
+        "Memory": "32GB",
+        "CPU2": "5",
+        "Memory2": "82GB",
+        "CPU3": "8",
+        "Memory3": "180GB",
+        "storage1": "250",
+        "storage2": "450",
+        "storage3": "750",
+        "payment": "120",
+        "payment2": "200",
+        "payment3": "400"
+    }

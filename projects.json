@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "projectname": "<span class=\"openProjects\">Project1</span>",
+            "administrators": "<div class='project-members'><a href='javascript:void(0)'><img src='assets/img/avatars/male.png' class='offline' alt='user'></a> </div> ",
+            "status": "<span class='label label-success'>ACTIVE</span>",
+            "starts": "01-21-2013",
+            "modifi": "<strong>02-30-2018</strong>"
+        },
+        {
+            "projectname": "<span class=\"openProjects\">Project2</span>",
+            "administrators": "<div class='project-members'><a href='javascript:void(0)'><img src='assets/img/avatars/male.png' class='offline' alt='user'></a> </div> ",
+            "status": "<span class='label label-success'>ACTIVE</span>",
+            "starts": "01-21-2013",
+            "modifi": "<strong>02-30-2018</strong>"
+        },
+        {
+            "projectname": "<span class=\"openProjects\">Project3</span>",
+            "administrators": "<div class='project-members'><a href='javascript:void(0)'><img src='assets/img/avatars/male.png' class='offline' alt='user'></a> </div> ",
+            "status": "<span class='label label-success'>ACTIVE</span>",
+            "starts": "01-21-2013",
+            "modifi": "<strong>02-30-2018</strong>"
+        },
+        {
+            "projectname": "<span class=\"openProjects\">Project4</span>",
+            "administrators": "<div class='project-members'><a href='javascript:void(0)'><img src='assets/img/avatars/male.png' class='offline' alt='user'></a> </div> ",
+            "status": "<span class='label label-success'>ACTIVE</span>",
+            "starts": "01-21-2013",
+            "modifi": "<strong>02-30-2018</strong>"
+        },
+        {
+            "projectname": "<span class=\"openProjects\">Project5</span>",
+            "administrators": "<div class='project-members'><a href='javascript:void(0)'><img src='assets/img/avatars/male.png' class='offline' alt='user'></a> </div> ",
+            "status": "<span class='label label-success'>ACTIVE</span>",
+            "starts": "01-21-2013",
+            "modifi": "<strong>02-30-2018</strong>"
+        },
+        {
+            "projectname": "<span class=\"openProjects\">Project6</span>",
+            "administrators": "<div class='project-members'><a href='javascript:void(0)'><img src='assets/img/avatars/male.png' class='offline' alt='user'></a> </div> ",
+            "status": "<span class='label label-success'>ACTIVE</span>",
+            "starts": "01-21-2013",
+            "modifi": "<strong>02-30-2018</strong>"
+        },
+        {
+            "projectname": "<span class=\"openProjects\">Project7</span>",
+            "administrators": "<div class='project-members'><a href='javascript:void(0)'><img src='assets/img/avatars/male.png' class='offline' alt='user'></a> </div> ",
+            "status": "<span class='label label-success'>ACTIVE</span>",
+            "starts": "01-21-2013",
+            "modifi": "<strong>02-30-2018</strong>"
+        },
+        {
+            "projectname": "<span class=\"openProjects\">Project8</span>",
+            "administrators": "<div class='project-members'><a href='javascript:void(0)'><img src='assets/img/avatars/male.png' class='offline' alt='user'></a> </div> ",
+            "status": "<span class='label label-success'>ACTIVE</span>",
+            "starts": "01-21-2013",
+            "modifi": "<strong>02-30-2018</strong>"
+        },
+        {
+            "projectname": "<span class=\"openProjects\">Project9</span>",
+            "administrators": "<div class='project-members'><a href='javascript:void(0)'><img src='assets/img/avatars/male.png' class='offline' alt='user'></a> </div> ",
+            "status": "<span class='label label-success'>ACTIVE</span>",
+            "starts": "01-21-2013",
+            "modifi": "<strong>02-30-2018</strong>"
+        },
+        {
+            "projectname": "<span class=\"openProjects\">Project10</span>",
+            "administrators": "<div class='project-members'><a href='javascript:void(0)'><img src='assets/img/avatars/male.png' class='offline' alt='user'></a> </div> ",
+            "status": "<span class='label label-success'>ACTIVE</span>",
+            "starts": "01-21-2013",
+            "modifi": "<strong>02-30-2018</strong>"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+<div class="accessManagement">
+  <div class="panel panel-default">
+    <div class="panel-heading">Acess Management</div>
+    <div class="panel-body">
+      <div class="widget-body">
+        <sa-datatable
+          [options]="options"
+          paginationLength="true" tableClass="table table-striped table-bordered table-hover"
+          width="100%"
+          (accessSingle)="updateSingle($event)"
+          >
+          <thead>
+          <tr>
+            <th class="accessOpen"><i
+              class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i>
+              Name
+            </th>
+            <th><i
+              class="text-muted hidden-md hidden-sm hidden-xs"></i>
+              Login
+            </th>
+            <th>Account</th>
+            <th><i
+              class="txt-color-blue hidden-md hidden-sm hidden-xs"></i>
+              Creation
+            </th>
+          </tr>
+          </thead>
+        </sa-datatable>
+      </div>
+      <div *ngIf="newTable">
+        <h3>{{newTableValue}}</h3>
+        <sa-datatable [options]="options2"
+          [detailsFormat]="detailsFormat"
+          tableClass="display projects-table table table-striped table-bordered table-hover"
+          width="100%"
+          >
+          <thead>
+          <tr>
+            <th></th>
+            <th>Policy Name</th>
+            <th><i
+              class="text-muted hidden-md hidden-sm hidden-xs"></i>
+              Policy Type
+            </th>
+            <th>Policy Status</th>
+          </tr>
+          </thead>
+
+        </sa-datatable>
+        <div class="add-policy">
+          <button class="btn btn-success" (click)="gotoAdd()">Add Policy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

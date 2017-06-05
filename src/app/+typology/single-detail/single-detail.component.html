@@ -1,0 +1,86 @@
+<div class="singleModel">
+    <div class="panel panel-default">
+        <div class="panel-heading">Single Detail</div>
+        <div class="panel-body" *ngIf="!loading">
+          <h5>{{single}}</h5>
+          <div class="logo-here col-sm-12">
+            <div class="logo">
+              <img src="{{singleDetail.logo}}" class="img-responsive">
+              <p>{{singleDetail.size}}</p>
+            </div>
+          </div>
+          <form class="smart-form">
+            <section>
+              <label class="label">Project Name:</label>
+              <label class="input"> <i class="icon-append fa fa-question-circle"></i>
+                <input type="text" placeholder="Focus to view the tooltip">
+                <b class="tooltip tooltip-top-right">
+                  <i class="fa fa-warning txt-color-teal"></i>
+                  Some helpful information</b>
+              </label>
+            </section>
+            <section>
+              <label class="label">Select Cloud</label>
+
+              <div class="row">
+                <div class="col col-4">
+                  <div *ngFor="let single of singleDetail.clouds; let i = index">
+                    <label class="radio" *ngIf="i < 3">
+                    <input type="radio" name="radio">
+                    <i></i>{{single}}</label>
+                  </div>
+                </div>
+                <div class="col col-4">
+                  <div *ngFor="let single of singleDetail.clouds; let i = index">
+                  <label class="radio" *ngIf="i > 2 && i < 6">
+                    <input type="radio" name="radio">
+                    <i></i>{{single}}</label>
+                  </div>
+                </div>
+                <div class="col col-4">
+                  <div *ngFor="let single of singleDetail.clouds; let i = index">
+                  <label class="radio" *ngIf="i > 5 && i < 9">
+                    <input type="radio" name="radio">
+                    <i></i>{{single}}</label>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </form>
+          <div class="other-detail">
+            <div class="environment col-sm-12">
+              <div class="col-sm-4">
+                <p *ngIf="path.indexOf('general') > -1">CPU(s): {{singleDetail.CPU}}</p>
+                <p *ngIf="path.indexOf('powerConfigs') > -1">CPU(s): {{singleDetail.CPU2}}</p>
+                <p *ngIf="path.indexOf('largeStorage') > -1">CPU(s): {{singleDetail.CPU3}}</p>
+              </div>
+              <div class="col-sm-4">
+                <p *ngIf="path.indexOf('general') > -1">Memory: {{singleDetail.Memory}}</p>
+                <p *ngIf="path.indexOf('powerConfigs') > -1">Memory: {{singleDetail.Memory2}}</p>
+                <p *ngIf="path.indexOf('largeStorage') > -1">Memory: {{singleDetail.Memory3}}</p>
+              </div>
+            </div>
+            <div class="col-sm-12 storage">
+              <label class="col-sm-12">Storage(GB): {{storage}}</label>
+              <div class="col-sm-12 r-slider">
+                <nouislider [connect]="true" [min]="minValue" [max]="maxValue" [step]="1" [(ngModel)]="ValueRange" (ngModelChange)="valueUpdate($event)"></nouislider>
+              </div>
+              <div class="col-sm-12 network">
+                <label>Network:</label>
+              </div>
+              <div class="col-sm-12 firewall">
+                <label>Firewall:</label>
+              </div>
+              <div class="col-sm-12 payment">
+                <label *ngIf="path.indexOf('general') > -1">Estimated Monthly Payment: {{singleDetail.payment}}/month</label>
+                <label *ngIf="path.indexOf('powerConfigs') > -1">Estimated Monthly Payment: {{singleDetail.payment2}}/month</label>
+                <label *ngIf="path.indexOf('largeStorage') > -1">Estimated Monthly Payment: {{singleDetail.payment3}}/month</label>
+              </div>
+              <div class="col-sm-12 submit-button">
+                <button class="btn btn-default">Start up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

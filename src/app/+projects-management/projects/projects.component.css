@@ -1,0 +1,18 @@
+.projects{
+    padding: 20px;
+}
+.create-button{
+    text-align: right;
+}
+.create-button .btn{
+    padding: 5px 15px;
+}
+.add-admins{
+    text-align: right;
+}
+.projects-table{
+    margin-top: 20px;
+}
+.infra h4{
+    text-align: center;
+}

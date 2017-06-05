@@ -1,0 +1,10 @@
+{
+    "Data": [
+        {
+            "infra": "Infra1",
+            "cpus'": "2",
+            "memory": "16GB",
+            "storage": "250GB"
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+<div class="projects">
+  <div class="panel panel-default">
+    <div class="panel-heading">Projects Management</div>
+    <div class="panel-body">
+      <h3>Projects</h3>
+      <div class="col-sm-6">
+        <table class="table table-bordered smart-form">
+          <tbody>
+          <tr>
+            <td>Enter Project Name:</td>
+            <td>
+              <label class="input">
+                <input type="text" name="project">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>Administrator Name</td>
+            <td>Anh Tran</td>
+          </tr>
+          <tr>
+            <td>
+              <label class="checkbox" (change)="addAdminis($event)">
+                <input type="checkbox" name="checkbox">
+                <i></i>Add Additional Administrators</label>
+              </td>
+              <td class="create-button">
+                <button class="btn btn-success">Create</button>
+              </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-6" *ngIf="addAdmin">
+        <sa-datatable
+          [options]="options"
+          paginationLength="true" tableClass="table table-striped table-bordered table-hover smart-form"
+          width="100%"
+          >
+          <thead>
+          <tr>
+            <th>
+            </th>
+            <th><i
+              class="text-muted hidden-md hidden-sm hidden-xs"></i>
+              Name
+            </th>
+          </tr>
+          </thead>
+        </sa-datatable>
+        <div class="add-admins">
+          <button class="btn btn-primary">Add</button>
+        </div>
+      </div>
+      <div class="col-sm-12 projects-table">
+        <sa-datatable [options]="options2"
+          [detailsFormat]="detailsFormat"
+          tableClass="display projects-table table table-striped table-bordered table-hover"
+          width="100%" (openTables)="openProject($event)">
+          <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Administrators</th>
+            <th>Status</th>
+            <th><i
+              class="fa fa-fw fa-calendar text-muted hidden-md hidden-sm hidden-xs"></i>
+              Created Date
+            </th>
+            <th><i
+              class="fa fa-fw fa-calendar text-muted hidden-md hidden-sm hidden-xs"></i>
+              Last Modified
+            </th>
+          </tr>
+          </thead>
+        </sa-datatable>
+      </div>
+      <div *ngIf="openInfra != ''" class="col-sm-12">
+        <h3>{{openInfra}}</h3>
+        <div class="col-sm-6 infra">
+          <h4>Infrastrucute</h4>
+          <sa-datatable
+          [options]="options3"
+          paginationLength="true" tableClass="table table-striped table-bordered table-hover smart-form"
+          width="100%"
+          >
+          <thead>
+          <tr>
+            <th><i
+              class="text-muted hidden-md hidden-sm hidden-xs"></i>
+              Name
+            </th>
+            <th>Cloud</th>
+            <th>Details</th>
+          </tr>
+          </thead>
+        </sa-datatable>
+        </div>
+        <div class="col-sm-6 infra">
+          <h4>AppStacks</h4>
+          <sa-datatable
+          [options]="options4"
+          paginationLength="true" tableClass="table table-striped table-bordered table-hover smart-form"
+          width="100%"
+          >
+          <thead>
+          <tr>
+            <th><i
+              class="text-muted hidden-md hidden-sm hidden-xs"></i>
+              Name
+            </th>
+            <th>Infrastrucute</th>
+            <th>Details</th>
+          </tr>
+          </thead>
+        </sa-datatable>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

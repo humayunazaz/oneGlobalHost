@@ -1,0 +1,71 @@
+[
+    {
+        "id":"1",
+        "project": "1",
+        "title":"Project 1",
+        "selected":true,
+        "type": "MongoDB Large",
+        "compute": "Google Compute"
+    },
+    {
+        "id":"2",
+        "project": "2",
+        "title":"Project 2",
+        "selected":true,
+        "type": "MongoDB Large",
+        "compute": "Google Compute"
+    },
+    {
+        "id":"3",
+        "project": "3",
+        "title":"Project 3",
+        "selected":true,
+        "type": "MongoDB Large",
+        "compute": "Google Compute"
+    },
+    {
+        "id":"4",
+        "title":"Cassandra Medium",
+        "selected":false
+    },
+    {
+        "id":"5",
+        "title":"Cassandra Medium",
+        "selected":false
+    },
+    {
+        "id":"6",
+        "title":"Cassandra Medium",
+        "selected":false
+    },
+    {
+        "id":"7",
+        "title":"Cassandra Medium",
+        "selected":false
+    },
+    {
+        "id":"8",
+        "title":"Cassandra Medium",
+        "selected":false
+    },
+    {
+        "id":"9",
+        "title":"Cassandra Medium",
+        "selected":false
+    },
+    {
+        "id":"10",
+        "title":"Cassandra Medium",
+        "selected":false
+    },
+    {
+        "id":"11",
+        "title":"Cassandra Medium",
+        "selected":false
+    },
+    {
+        "id":"12",
+        "title":"Cassandra Medium",
+        "selected":false
+    }
+]

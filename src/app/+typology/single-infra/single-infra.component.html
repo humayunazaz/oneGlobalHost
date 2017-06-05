@@ -1,0 +1,58 @@
+<div class="deployed">
+    <h3>{{deployed}}</h3>
+    <div *ngFor="let single of content">
+        <div class="col-sm-3" *ngIf="single.selected">
+            <div class="single-instance">
+                <div class="text">
+                    <p>{{single.title}}</p>
+                    <p>{{single.type}}</p>
+                    <p>{{single.compute}}</p>
+                </div>
+                <div class="icons">
+                    <i class="fa fa-info-circle" (click)="openModel(single)" data-toggle="modal" data-target="#info"></i>
+                    <i class="fa fa-share-alt-square" (click)="share(single)"></i>
+                    <i class="fa fa-copy" (click)="copy(single)"></i>
+                    <i class="fa fa-times" (click)="delete(single)"></i>
+                    <i class="fa fa-repeat" (click)="refreshModel(single)"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="models">
+    <h3>{{models}}</h3>
+    <div *ngFor="let single of content">
+        <div class="col-sm-3" *ngIf="!single.selected">
+            <div class="single-instance">
+                <div class="text">
+                    <p>{{single.title}}</p>
+                </div>
+                <div class="icons">
+                    <i class="fa fa-info-circle" (click)="openModel(single)" data-toggle="modal" data-target="#info"></i>
+                    <i class="fa fa-cloud-upload" (click)="upload(single)"></i>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="info" role="dialog" *ngIf="showModel">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{{singleDetail.title}}</h4>
+        </div>
+        <div class="modal-body" *ngIf="singleDetail.selected">
+          <p>{{singleDetail.type}}</p>
+          <p>{{singleDetail.compute}}</p>
+        </div>
+        <div class="modal-body" *ngIf="!singleDetail.selected">
+          <p>Detail info will show here.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>

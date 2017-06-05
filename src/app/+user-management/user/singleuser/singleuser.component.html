@@ -1,0 +1,42 @@
+<div class="single-user">
+  <div class="panel panel-default" *ngIf="!loading">
+    <div class="panel-heading">Single User Detail</div>
+    <div class="panel-body">
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">Id: {{singleDetail.id}}</li>
+      <li class="list-group-item">Name: {{singleDetail.name}}</li>
+      <li class="list-group-item">Status: {{singleDetail.status}}</li>
+      <li class="list-group-item">Login Status: 
+        <span class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="show-tabs" ng-model="demoShowTabs" [checked]="singleDetail.loginstatus == 'active'">
+          <label class="onoffswitch-label" for="show-tabs">
+            <span class="onoffswitch-inner" data-swchon-text="Active" data-swchoff-text="Inactive"></span>
+            <span class="onoffswitch-switch"></span>
+          </label>
+        </span>
+      </li>
+      <li class="list-group-item">Account Status: 
+        <span class="onoffswitch">
+          <input type="checkbox" name="onoffswitch"  (change)="changeStatus($event)" class="onoffswitch-checkbox" id="accountstatus" ng-model="demoShowTabs" [checked]="singleDetail.accountstatus == 'active'">
+          <label class="onoffswitch-label" for="accountstatus">
+            <span class="onoffswitch-inner" data-swchon-text="Active" data-swchoff-text="Inactive"></span>
+            <span class="onoffswitch-switch"></span>
+          </label>
+        </span>
+      </li>
+      <li class="list-group-item">Groups: {{singleDetail.groups}}</li>
+      <li class="list-group-item">Projects: {{singleDetail.projects}}</li>
+      <li class="list-group-item saveChanges">
+        <button class="btn btn-default" (click)="saveUser()">Save</button></li>
+      <li class="list-group-item delete-button">
+        <button type="button" class="btn btn-labeled btn-danger">
+          <span class="btn-label">
+            <i class="glyphicon glyphicon-trash"></i>
+          </span>
+          Delete
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

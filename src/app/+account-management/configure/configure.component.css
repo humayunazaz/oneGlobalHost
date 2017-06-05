@@ -1,0 +1,12 @@
+.main-heading{
+    padding: 15px 0px;
+}
+.bs-progress p{
+    float: left;
+    width: 10%;
+}
+.bs-progress .bar-holder{
+    padding: 0 10px;
+    float: left;
+    width: 90%;
+}

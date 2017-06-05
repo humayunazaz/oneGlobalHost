@@ -1,0 +1,164 @@
+<div class="payment-detail col-sm-9">
+    <div class="panel panel-default">
+        <div class="panel-heading">Payment Detail</div>
+        <div class="panel-body">
+          <div class="col-sm-3">
+            <p>Your new plan:</p>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4" *ngIf="title == 'Bronze'">
+            <div class="panel panel-orange">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  {{title}}</h3>
+              </div>
+              <div class="panel-body no-padding text-align-center">
+                <div class="the-price">
+                  <h1>
+                    $10<span class="subscript">/mo</span></h1>
+                  <small>1 month FREE trial</small>
+                </div>
+                <table class="table">
+                  <tr>
+                    <td>
+                      1 Account
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      1 Project
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      100K API Access
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      {{ds}}MB Storage
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Custom Cloud Services
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      Weekly Reports
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="panel-footer no-padding">
+                <a class="btn bg-color-orange txt-color-white btn-block" role="button">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4" *ngIf="title == 'Silver'">
+            <div class="panel panel-purple">
+              <img src="assets/img/ribbon.png" class="ribbon" alt="">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  {{title}}</h3>
+              </div>
+              <div class="panel-body no-padding text-align-center">
+                <div class="the-price">
+                  <h1>
+                    $20<span class="subscript">/mo</span></h1>
+                  <small>1 month FREE trial</small>
+                </div>
+                <table class="table">
+                  <tr>
+                    <td>
+                      2 Account
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      5 Project
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      100K API Access
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      {{ds}}MB Storage
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Custom Cloud Services
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      Weekly Reports
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="panel-footer no-padding">
+                <a class="btn bg-color-purple txt-color-white btn-block" role="button">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4" *ngIf="title == 'Gold'">
+            <div class="panel panel-greenLight">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  {{title}}</h3>
+              </div>
+              <div class="panel-body no-padding text-align-center">
+                <div class="the-price">
+                  <h1>
+                    $35<span class="subscript">/mo</span></h1>
+                  <small>1 month FREE trial</small>
+                </div>
+                <table class="table">
+                  <tr>
+                    <td>
+                      5 Account
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      20 Project
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      300K API Access
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      {{ds}}MB Storage
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Custom Cloud Services
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      Weekly Reports
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="panel-footer no-padding">
+                <a class="btn bg-color-greenLight txt-color-white btn-block" role="button">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <checkout-custom></checkout-custom>
+          </div>
+        </div>
+    </div>
+</div>

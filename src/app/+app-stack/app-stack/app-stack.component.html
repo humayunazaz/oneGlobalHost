@@ -1,0 +1,12 @@
+<div class="Insfrastructure">
+    <div class="panel panel-default">
+        <div class="panel-heading">AppStack Management</div>
+        <div class="panel-body">  
+          <div class="col-sm-12">
+            <div *ngIf="!loading">
+              <single-infra [content]="content" [deployed]="deployed" [models]="models" (detail)="gotoDetail($event.single)"></single-infra>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

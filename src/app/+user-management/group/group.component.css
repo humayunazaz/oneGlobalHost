@@ -1,0 +1,21 @@
+.group-management{
+    padding: 20px;
+}
+.group-management .message{
+    margin-bottom: 15px;
+}
+.group-management .message-content{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    background: #3a3633;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}
+search-group, data-table{
+    float: left;
+}
+.group-management .message-content p{
+    margin:0;
+}

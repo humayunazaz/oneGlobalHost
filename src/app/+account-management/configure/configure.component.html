@@ -1,0 +1,185 @@
+<div class="account-config col-sm-9">
+    <div class="panel panel-default">
+        <div class="panel-heading">Configuration</div>
+        <div class="panel-body">
+          <div class="col-sm-12 main-heading">
+              <h5>Current Config:</h5>
+              <div class="col-sm-3">
+                <p>Amazon Web Services</p>
+              </div>
+              <div class="col-sm-1">
+                <p>CPU:2</p>
+              </div>
+              <div class="col-sm-2">
+                <p>Memory: 16GB</p>
+              </div>
+              <div class="col-sm-6 bs-progress">
+                <p>Disk: </p>
+                <div class="bar-holder">
+                  <div class="progress">
+                    <div class="progress-bar bg-color-blue" saProgressbar data-transitiongoal="75"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="panel panel-orange">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  {{heads[0]}}</h3>
+              </div>
+              <div class="panel-body no-padding text-align-center">
+                <div class="the-price">
+                  <h1>
+                    $10<span class="subscript">/mo</span></h1>
+                  <small>1 month FREE trial</small>
+                </div>
+                <table class="table">
+                  <tr>
+                    <td>
+                      1 Account
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      1 Project
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      100K API Access
+                    </td>
+                  </tr>
+                  <tr class="active bronze-range r-slider">
+                    <td>
+                       <nouislider [connect]="true" [min]="bronzeMin" [max]="bronzeLimit" [step]="1" [(ngModel)]="bronzeRange" (ngModelChange)="bronzeUpdate($event)"></nouislider>
+                       {{bronzeValue}} MB
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Custom Cloud Services
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      Weekly Reports
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="panel-footer no-padding">
+                <a (click)="gotoSingle(heads[0], bronzeValue)" class="btn bg-color-orange txt-color-white btn-block" role="button">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="panel panel-purple">
+              <img src="assets/img/ribbon.png" class="ribbon" alt="">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  {{heads[1]}}</h3>
+              </div>
+              <div class="panel-body no-padding text-align-center">
+                <div class="the-price">
+                  <h1>
+                    $20<span class="subscript">/mo</span></h1>
+                  <small>1 month FREE trial</small>
+                </div>
+                <table class="table">
+                  <tr>
+                    <td>
+                      2 Account
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      5 Project
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      100K API Access
+                    </td>
+                  </tr>
+                  <tr class="active silver-range r-slider">
+                    <td>
+                       <nouislider [connect]="true" [min]="silverMin" [max]="silverLimit" [step]="1" [(ngModel)]="silverRange" (ngModelChange)="silverUpdate($event)"></nouislider>
+                       {{silverValue}} MB
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Custom Cloud Services
+                    </td>
+                  </tr>
+                  <tr class="active silver-range r-slider">
+                    <td>
+                      Weekly Reports
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="panel-footer no-padding">
+                <a (click)="gotoSingle(heads[1], silverValue)" class="btn bg-color-purple txt-color-white btn-block" role="button">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="panel panel-greenLight">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  {{heads[2]}}</h3>
+              </div>
+              <div class="panel-body no-padding text-align-center">
+                <div class="the-price">
+                  <h1>
+                    $35<span class="subscript">/mo</span></h1>
+                  <small>1 month FREE trial</small>
+                </div>
+                <table class="table">
+                  <tr>
+                    <td>
+                      5 Account
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      20 Project
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      100K API Access
+                    </td>
+                  </tr>
+                  <tr class="active gold-range r-slider">
+                    <td>
+                      <nouislider [connect]="true" [min]="goldMin" [max]="goldLimit" [step]="1" [(ngModel)]="goldRange" (ngModelChange)="goldUpdate($event)"></nouislider>
+                       {{goldValue}} MB
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Custom Cloud Services
+                    </td>
+                  </tr>
+                  <tr class="active">
+                    <td>
+                      Weekly Reports
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="panel-footer no-padding">
+                <a (click)="gotoSingle(heads[2], goldValue)" class="btn bg-color-greenLight txt-color-white btn-block" role="button">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <!--<nouislider [connect]="true" [min]="someMin" [max]="someLimit" [step]="1" [(ngModel)]="someValue"></nouislider>-->
+           
+          </div>
+        </div>
+    </div>
+</div>

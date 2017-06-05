@@ -1,0 +1,47 @@
+<div class="group-management">
+  <div class="panel panel-default">
+    <div class="panel-heading">Group Management</div>
+    <div class="panel-body">
+      <add-group (addGroup)="newGroup($event.update)"></add-group>
+      <div class="message"
+          [ngClass]="{
+              hidden: !flash
+          }"
+      >
+          <div class="message-content">
+              <p>Group is added</p>
+          </div>
+      </div>
+      <search-group></search-group>
+      <!--<div *ngIf="!loading">
+          <data-table [data]="data" [rowsOnPage]="rowsOnPage" [sortBy]="sortBy" [user]="user"></data-table>
+      </div>-->
+      <sa-datatable [options]="options"
+                    [detailsFormat]="detailsFormat"
+                    tableClass="display projects-table table table-striped table-bordered table-hover"
+                    width="100%"
+                    >
+        <thead>
+        <tr>
+            <th></th>
+            <th>Id</th>
+            <th><i
+            class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i>
+            Gravatar
+            </th>
+            <th>Name</th>
+            <th>Organization</th>
+            <th>
+            Contacts
+            </th>
+            <th>
+                Admins
+            </th>
+            <th>Members</th>
+        </tr>
+        </thead>
+
+        </sa-datatable>
+    </div>
+  </div>
+</div>

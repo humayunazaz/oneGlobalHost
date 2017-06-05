@@ -1,0 +1,21 @@
+.user-management{
+    padding: 20px;
+}
+.user-management .message{
+    margin-bottom: 15px;
+}
+.user-management .message-content{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    background: #3a3633;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}
+user-search, data-table{
+    float: left;
+}
+.user-management .message-content p{
+    margin:0;
+}

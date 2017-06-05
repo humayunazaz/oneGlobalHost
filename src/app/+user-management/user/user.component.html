@@ -1,0 +1,51 @@
+<div class="user-management">
+    <div class="panel panel-default">
+        <div class="panel-heading">User Management</div>
+        <div class="panel-body">
+            <add-user (updateUser)="addUser($event.update)"></add-user>
+            <div class="message"
+                [ngClass]="{
+                    hidden: !flash
+                }"
+            >
+                <div class="message-content">
+                    <p>User is added</p>
+                </div>
+            </div>
+            <user-search></user-search>
+            <!--<div *ngIf="!loading">
+                <data-table [data]="data" [rowsOnPage]="rowsOnPage" [sortBy]="sortBy"></data-table>
+            </div>-->
+            <sa-datatable [options]="options"
+                         [detailsFormat]="detailsFormat"
+                         tableClass="display projects-table table table-striped table-bordered table-hover"
+                         width="100%"
+                        (accountStatus)="updateAccount($event.update)"
+                         >
+                <thead>
+                <tr>
+                  <th></th>
+                  <th>Id</th>
+                  <th><i
+                    class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i>
+                    Gravatar
+                  </th>
+                  <th>Name</th>
+                  <th>Organization</th>
+                  <th>Groups
+                  </th>
+                  <th>
+                    Contacts
+                  </th>
+                  <th>
+                    Last Login
+                  </th>
+                  <th>Login Status</th>
+                  <th>Account Status</th>
+                </tr>
+                </thead>
+
+              </sa-datatable>
+        </div>
+    </div>
+</div>

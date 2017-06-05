@@ -1,0 +1,144 @@
+<div class="panel panel-default">
+    <div class="panel-heading" *ngIf="user">User information</div>
+    <div class="panel-heading" *ngIf="!user">Group information</div>
+    <div class="panel-heading" *ngIf="userMembership">Membership</div>
+    <table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+        <thead>
+            <tr *ngIf="user && membership == ''">
+                <th>+/-</th>
+                <th>
+                    <mfDefaultSorter by="id">Id</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="gravatar">Gravatar</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="name">Name</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="organization">Organization</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="groups">Groups</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="contact">Contacts</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="lastlogin">Last Login</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="loginstatus">Login Status</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="accountstatus">Account Status</mfDefaultSorter>
+                </th>
+            </tr>
+            <tr *ngIf="!user && membership == ''">
+                <th>+/-</th>
+                <th>
+                    <mfDefaultSorter by="id">Id</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="gravatar">Gravatar</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="name">Name</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="organization">Organization</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="contact">Contacts</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="admins">Admins</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="members">Members</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="actions">Actions</mfDefaultSorter>
+                </th>
+            </tr>
+            <tr *ngIf="membership == 'user'">
+                <th>
+                    <mfDefaultSorter by="id">Id</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="gravatar">Gravatar</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="name">Name</mfDefaultSorter>
+                </th>
+            </tr>
+            <tr *ngIf="membership == 'group'">
+                <th>
+                    <mfDefaultSorter by="id">Id</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="gravatar">Gravatar</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="organization">Organization</mfDefaultSorter>
+                </th>
+                <th>
+                    <mfDefaultSorter by="name">Name</mfDefaultSorter>
+                </th>
+            </tr>
+        </thead>
+        <tbody *ngIf="user && membership == ''">
+            <tr *ngFor="let item of mf.data">
+                <td>
+                    <button (click)="gotoSingle(item)"><i class="fa fa-plus"></i></button>
+                </td>
+                <td>{{item.Id}}</td>
+                <td>{{item.gravatar}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.organization}}</td>
+                <td (click)="gotoGroup()">{{item.groups}}</td>
+                <td>{{item.contacts}}</td>
+                <td>{{item.lastlogin}}</td>
+                <td>{{item.loginstatus}}</td>
+                <td>{{item.accountstatus}}</td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="!user && membership == ''">
+            <tr *ngFor="let item of mf.data">
+                <td>
+                    <button><i class="fa fa-plus" (click)="gotoSingle(item)"></i></button>
+                </td>
+                <td>{{item.id}}</td>
+                <td>{{item.Gravatar}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.organization}}</td>
+                <td>{{item.contacts}}</td>
+                <td (click)="gotoSingleUser(item)">{{item.admins}}</td>
+                <td><a *ngFor="let member of item.members">{{member.name}}</a></td>
+                <td (click)="remove(item)">Delete</td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="membership == 'user'">
+            <tr *ngFor="let item of mf.data">
+                <td style="width:30%;">{{item.id}}</td>
+                <td style="width:30%;">{{item.Gravatar}}</td>
+                <td style="width:40%;">{{item.name}}</td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="membership == 'group'">
+            <tr *ngFor="let item of mf.data">
+                <td>{{item.id}}</td>
+                <td>{{item.Gravatar}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.organization}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

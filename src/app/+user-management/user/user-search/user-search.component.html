@@ -1,0 +1,6 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Search User</div>
+  <div class="panel-body">
+    <user-form [groups]="groups" [projects]="projects" [form]="form" (addResult)="searchUser($event.add)"></user-form>
+  </div>
+</div>

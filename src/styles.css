@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* #GOOGLE FONT */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700");
+
+/*Humayun styling*/
+.user-form .form-group{
+    float: left;
+    width: 50%;
+}
+.user-form .form-group label{
+    padding: 7px 0;
+}
+.user-form .add-button button{
+    float: right;
+}
+ul.pagination.float-sm-right{
+    display: none;
+}
+.accountsStatus.onoffswitch{
+    width: 70px;
+}
+.accountsStatus .onoffswitch-switch{
+    right: 50px;
+}
+.r-slider .noUi-handle-lower{
+    display: none;
+}
+.r-slider .noUi-horizontal .noUi-handle{
+    width: 25px;
+    height: 25px;
+    left: -10px;
+    top: 3px;
+    border-radius: 50%;
+    background: #333;
+    box-shadow: none;
+    border: none;
+    border: 1px solid #FFF;
+    background: #858585;
+}
+.r-slider .noUi-horizontal .noUi-handle:before, .r-slider .noUi-horizontal .noUi-handle:after{
+    display: none;
+}
+.r-slider .noUi-base{
+    transform: translate3d(0,0,0);
+    background: #fff;
+    border: none;
+}
+.r-slider .noUi-connect{
+    background: #3276b1;
+}
+.Insfrastructure{
+    padding: 20px;
+}
+.custom-spinner{
+    margin-top: 20px;
+}
+.custom-spinner .ui-spinner{
+    width: 30%;
+    margin-left: 20px;
+}
+.permissionNavi{
+    cursor: pointer;
+}
+.openProjects{
+    cursor: pointer;
+}
+.gotoInfra, .gotoStack{
+    cursor: pointer;
+}

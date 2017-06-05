@@ -1,0 +1,72 @@
+<div id="content">  
+
+  <sa-widgets-grid>
+    <!-- row -->
+    <div class="row">
+      <!-- NEW WIDGET START -->
+      <article class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+
+        <!-- Widget ID (each widget will need unique ID)-->
+        <sa-widget id="deployFromGitRepository"  [colorbutton]="false" [editbutton]="false" [deletebutton]="false">
+          <!-- widget options:
+          usage: <sa-widget [editbutton]="false">
+
+          [colorbutton]="false"
+          [editbutton]="false"
+          [togglebutton]="false"
+          [deletebutton]="false"
+          [fullscreenbutton]="false"
+          [custombutton]="false"
+          [collapsed]="true"
+          [sortable]="false"
+
+          -->
+          <header>
+            <span class="widget-icon"><i class="fa fa-git" aria-hidden=true ></i> </span>
+            <h2>Git Repository</h2>
+
+          </header>
+
+          <!-- widget div-->
+          <div>
+
+            <!-- widget content -->
+            <div class="widget-body">
+
+              <form class="form-horizontal">
+                <fieldset>
+                  <div class="form-group">
+                    <label class="sr-only" for="dockerRegistryImageUrl">URL</label>
+                    <input type="url" class="form-control" id="dockerRegistryImageUrl" placeholder="Git repository URL">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="dockerRegistryUsername">Password</label>
+                    <input type="text" class="form-control" id="dockerRegistryUsername" placeholder="Git repository Username">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="dockerRegistryPassword">Password</label>
+                    <input type="password" class="form-control" id="dockerRegistryPassword" placeholder="Git repository Password">
+                  </div>
+                </fieldset>
+                <div class="form-actions">
+                  <div class="btn btn-primary btn-lg">
+                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                    Deploy
+                  </div>
+                </div>
+              </form>
+
+            </div>
+            <!-- end widget content -->
+          </div>
+          <!-- end widget div -->
+
+        </sa-widget>
+        <!-- end widget -->         
+     </article>
+     <!-- WIDGET END -->
+          
+    </div>
+    <!-- end row -->
+  </sa-widgets-grid>
+</div>
